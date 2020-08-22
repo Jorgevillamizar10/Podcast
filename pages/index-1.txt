@@ -1,0 +1,38 @@
+export default class extends React.Component {
+    render(){
+        return <div>
+            <h1>Hola Mundo!</h1>
+            <p>Bienvenidos al Curso de Next.js</p>
+
+            <img src="/platzi-logo.png" alt="platzi"/>
+
+            {/* Estilos en Next.js con Styled JSX */}
+            {/* para darle estilo a solo lo que tenemos dentro del componente return */}
+            <style jsx>{`
+                h1 {
+                    color: red;
+                }
+                
+                :global(div p) {
+                    color:blue;
+                }
+
+                img{
+                    max-width: 50%;
+                    display: block;
+                    margin: 0 auto;
+                }
+
+            `}</style>
+            
+            {/* global para poder darle estilo a todas las etiquetas y no solo a las que tengo dentro de este componente */}
+            <style jsx global>{`
+                body {
+                    background: white;
+                }
+
+            `}</style>
+
+        </div>
+    }
+}
